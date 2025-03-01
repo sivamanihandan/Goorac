@@ -1,0 +1,36 @@
+body {
+  font-family: calibiri 
+}
+.settingsText {
+    position: relative;
+    background-color:white;
+    font-size: 18px;
+    height:45px ;
+    margin:0 auto ;
+    border-bottom: 1px solid grey;
+}
+.afh{
+    margin-top:10px;
+    margin-left: 10px;
+}
+input[type=q] {
+    width: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  input[type=q]:focus {
+    width: 270px;
+  }
+  .options{
+    margin-left: 10px;
+    margin: 0 auto;
+  }
+  .options{
+    margin-left: 10px;
+    
+  }

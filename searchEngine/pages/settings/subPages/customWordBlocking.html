@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goorac - Settings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/style/style.css">
+</head>
+<body onload="s()" >
+    <div class="settingsText">
+        <p class="afh"><i type="button" onclick="window.history.back();" class="fa">&#xf060;</i><b> Custom Word Blocking</b></p>
+    </div>
+    <br>
+    <center>
+   <div class="">
+<input type="text" id="ads" placeholder="Add words" style="text-align: center;margin-left: 50px;border-radius: 15px;margin: o auto;border: 0.5px solid black ;" >
+<button class="btn btn-primary" style="border-radius:15px;" onclick="ss()" >Add</button>
+   </div>
+   <hr><br>
+   <p style="font-size: 16px;text-align: center;margin-top: 40px;"><b>words to Block</b></p>
+   <div style="width: auto;height:500px" >
+       <p style="margin-left: 50px;font-size: 18px;" id="before"></p>
+   </div>
+  </center>
+</body>
+<script>
+function ss(){
+  var q = document.getElementById("ads").value;
+  if( q == "" ){
+    document.getElementById("ads").style.backgroundColor = "silver"
+  }
+  else {
+    var qw = document.getElementById("ads").value;
+  var py = localStorage.getItem("dataB");
+  var ga =   qw + "✖️" + py ;
+  localStorage.setItem("dataB",ga );
+  document.getElementById("before").innerHTML = ga ;
+  }
+}
+function s() {
+  var py = localStorage.getItem("dataB");
+  if( py == null ){
+    localStorage.setItem("dataB", "boody" )
+    alert("User cannot search the words you entred here")
+  }
+  else {
+    var pye = localStorage.getItem("dataB");
+    document.getElementById("before").innerHTML = pye ;
+  }
+}
+</script>
+</html>

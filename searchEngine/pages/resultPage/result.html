@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_blank">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../src/style/style.css">
+</head>
+<body onload="we()" >
+    <center>
+        <div style="background-color :#0031CB;position: relative;" >
+       <center> <p style="font-size: 25px;color: white;position: relative;top: 10px;" ><b>Goorac</b></p></center>
+       <br><br>
+        <div  style="background-color: white;position: relative;margin-top: -25px;border-top-left-radius: 5px;border-top-right-radius: 5px;">
+    Goorac
+        </div>
+      </div>
+    <iframe src="" height="10000" scroll=no width="100%" style="margin-top: -100px;border: 0;" id="rt" ></iframe>
+    <video style="display: none;" id="myVideo" width="320" height="176">
+        <source src="proscessingVoice.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <Button onclick="we()" >dhd</Button>
+</body>
+<script>
+    function we() {
+        var asd = sessionStorage.getItem("res")
+        document.getElementById("rt").src = asd
+        sessionStorage.getItem("res","")
+    }
+</script>
+<style>
+    body {
+margin: 0 auto;
+color: white;
+border: 0;
+}
+</style>
+</html>

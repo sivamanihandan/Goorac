@@ -1,0 +1,108 @@
+<html>
+  <title>Goorac</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/style/style.css">
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=QMAceR3Q"></script>
+</head>
+<body>
+     <!--The home page-->
+  <div id="Page1"> 
+      <center>
+        <header>
+            <ul>
+             <li><a class="links" href="pages/settings/index.html"><button class="signbutton" type="button"><i style="font-size:24px" class="fa">&#xf013;</i></button></a></li>
+               <li><a href="pages/otherApps/otherAppsList.html"><img class="grid" src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png" title="Goorac apps"></a></li>
+              <li><a href="#images">Images</a></li>
+              <li><a href="">Videos</a></li>
+              </ul>  
+        </header>
+        <br>
+        <div class="logo">
+          <p style="font-size: 32px;" ><b>Goorac</b></p>
+         <!-- <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">-->
+        </div>
+        <div class="bar" >
+          <a href="#"><i style="color:silver;margin-left: 8px;" class="fa">&#xf002;</i></a>
+    <input class="searchbar" type="text" placeholder="Search" onclick="show('Page2','Page1');searchPageAutoFocus()" style="margin-left: 3px;" title="Search">
+    <a href="#"> <img onclick="window.location.href = 'pages/gooracLens/gooracLens.html'" class="Lens"  src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Google_Lens_-_new_logo.png"></a>
+    <a href="#"> <img onclick="init();runSpeechRecognition2()" class="voice" data-toggle="modal" data-target="#myModal" id="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
+        </div>
+        <div class="buttons">
+          <button class="button" type="button">Google Search</button>
+          <button class="button" type="button">I'm Feeling Lucky</button>
+         </div>
+</div>
+</center>
+   <!-- The Modal -->
+   <center><div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <main>
+           <!--Here visuvalizer-->
+          </main>
+          <h5 style="margin-top: 45px;">Listening...</h5>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <p style="color:blue">Ask"Who is your boss?"</p>
+        </div>
+      </div>
+    </div>
+  </div></center>
+<!--search div-->
+  <div id="Page2" style="display:none">
+    <center>
+    <div class="bar9">
+      <a href="#"><i style="color:silver;margin-left: 8px;" class="fa">&#xf002;</i></a>
+<input class="searchbar9" required type="search" placeholder="Search" id="dggfdf" title="Search" onkeyup="hideIcon();check_val();" onkeypDown="hideIcon()" onkeypress="hideIcon()" >
+<label><img onclick="init();runSpeechRecognition()" class="voice" data-toggle="modal" data-target="#myModal" id="voicee" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice" >
+</label></div>
+</center>
+<div class="searchrr">
+    <p id="before"> ggtgrf</p>  
+    <!--First time info-->
+    <p id="qw"></p>
+  </div>
+</div>
+  <!--Result page Div-->
+  <div id="Page3" style="display:none;">
+    <center>
+    <div style="background-color:rgba(255, 255, 255, 0);width:100%;position:absolute;margin-top:10px;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%)" id="trt" >
+      <br><br>
+      <div style="background-color: #e5e8f3;display: none;" id="lk">
+    Goorac
+    </div>
+    <div class="bar99"id="rtr"  >
+      <a href="#"><i id="sear" style="color:silver;margin-left: 8px;" class="fa">&#xf002;</i></a>
+<input id="asd" class="searchbar99" type="text" placeholder="Search" onclick="show('Page2','Page3');searchPageAutoFocus()" title="Search">
+<a href="#"> <img onclick="init();runSpeechRecognition2()" class="voice" data-toggle="modal" data-target="#myModal" id="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
+    </div>
+  </div>
+</center>
+<input id="leftIn" type="hidden" value="">
+  <iframe id="hh" width="100%" height="100%" src="pages/resultPage/result.html" target="_blank" style="border:0" ></iframe>
+  </div>
+    <script onload="login()" src="src/js/main.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=QMAceR3Q"></script>
+</body>
+</html> 

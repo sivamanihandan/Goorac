@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goorac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+    <div id="Page1">
+        <br> <br>
+        <p style="font-size: 32px;" ><b>Goorac</b></p>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <button class="btn btn-primary" onclick="show('Page2','Page1');" style="border-radius: 50px;">Continue to setup</button>
+    </div>
+    <div id="Page2" style="display:none">
+        <br> <br><br>
+        <p style="font-size: 32px;" ><b>Goorac</b></p>
+       
+       <p style="color: blue;">Create an Account</p>
+       <p>Who are you?</p>
+       <input type="text" id="name" name="Name" required placeholder="Name" onclick="c3()" autocomplete=off>
+       <br> <br>
+       <p>Please enter a Password</p>
+       <input type="text" id="pass" required name="Password" placeholder="Password" onclick="c2();la()" >
+       <br><br>
+      ________________________ <button onclick="next()" style="border-radius: 5px;" class="btn btn-primary">Next</button>
+        
+    </div>
+        
+    <div id="Page3" style="display:none">
+      <br>
+      <p style="font-size: 28px;" ><b>Goorac</b></p>
+      <br>
+      <p style="font-size: 18px;" id="user" ></p>
+      
+      <img src="https://bestanimations.com/media/loading-gears/2074796765loading-gears-animation-3.gif">
+    </div>
+    <div id="Page4" style="display:none">
+      <br>
+      <p style="font-size: 28px;" ><b>Goorac</b></p>
+      <br>
+      <img src="https://designmodo.com/wp-content/uploads/2015/09/webview.gif" style="width: 400px;height: auto;" >
+             <p>Control the app fully from the <b> Settings </b> option </p>
+             ________________________ <button onclick="window.location.href = '../../main.html' " style="border-radius: 5px;" class="btn btn-primary">Get start</button>
+      </div>
+    </center>
+</body>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+function next() {
+  c2();
+  var n = document.getElementById("name").value ;
+  localStorage.setItem("userName", n);
+  var p = document.getElementById("pass").value ;
+  localStorage.setItem( "userPassword", p )
+  document.getElementById("user").innerHTML = "Hello,"+ n ;
+  if (n == "" || p == "") {
+ c();
+    return false;
+  }
+  show('Page3','Page2');
+  setTimeout(function(){   show('Page4','Page3');}, 3000);
+}
+function c() {
+  var r = document.getElementById("name").value;
+  if(r == ""){
+    document.getElementById("name").style.backgroundColor = "#ffcccb";
+  }
+  var o = document.getElementById("pass").value;
+  if(o == ""){
+    document.getElementById("pass").style.backgroundColor = "#ffcccb";
+  }
+}
+function c2() {
+  document.getElementById("pass").style.backgroundColor = "white";
+}
+function c3() {
+  document.getElementById("name").style.backgroundColor = "white";
+}
+function la() {
+  var r = document.getElementById("name").value;
+  if(r == ""){
+    document.getElementById("name").style.backgroundColor = "#ffcccb";
+  }
+  else {
+    document.getElementById("name").style.backgroundColor = "#98e3a6";
+  }
+}
+</script>
+<style> 
+    input[type=text] {
+      width: 230px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 50px;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    input[type=text]:focus {
+      width: 270px;
+    }
+    </style>
+</html>

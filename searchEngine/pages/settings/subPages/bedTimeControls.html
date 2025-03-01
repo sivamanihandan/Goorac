@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goorac - Settings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/style/style.css">
+</head>
+<body>
+    <div class="settingsText">
+        <p class="afh"><i type="button" onclick="window.history.back();" class="fa">&#xf060;</i><b> Bed time Controls</b></p>
+    </div>
+    <center>
+     <label style="margin-top: 100px;">Start time</label> <input type="time" id="startTime"> <br><br>
+     <label>End time</label> <input type="time" id="endTime"></label><br>
+    __________<button class="btn btn-primary" id="tk" onclick="run()">Set</button>
+    <br><br><br><br><br><br><br><p id="d">This functiion is currently Disabled choose a time to Enable</p>
+</center>
+    </body>
+<script>
+function run() {
+    var a = document.getElementById("startTime").value;
+    var b = document.getElementById("endTime").value;
+    if(a == "" || b == "" ){
+        alert("You must fill out the box")
+    }
+    else{
+        localStorage.setItem("bTimeS",a);
+        localStorage.setItem("bTimeE",b);
+        aaa();
+    }
+}
+function aaa() {
+ var t =   localStorage.getItem("bTimeS");
+ var p =   localStorage.getItem("bTimeE");
+    if (t == null || p == null) {
+       
+    } else {
+        document.getElementById("d").innerHTML = "start in: " + t + "<br> End in: " + p
+        document.getElementById("startTime").value = t;
+        document.getElementById("endTime").value = p;
+        document.getElementById("tk").innerHTML = "change";
+    }
+}
+onload=function(){
+    aaa()
+}
+</script>
+</html>
